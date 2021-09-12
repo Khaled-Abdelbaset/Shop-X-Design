@@ -129,6 +129,12 @@ header .container nav.main ul .active {
     -ms-grid-column-span: 2;
     grid-column: 2 / 4;
   }
+  header .container hr {
+    display: none;
+  }
+  header .container nav.main {
+    display: none;
+  }
 }
 
 .home {
