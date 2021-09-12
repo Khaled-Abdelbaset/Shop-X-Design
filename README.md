@@ -1,2 +1,2 @@
 # Graduation-project-1
-HTM &amp; CSS Only
+HTML &amp; CSS Only
