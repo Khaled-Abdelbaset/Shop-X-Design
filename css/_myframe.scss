@@ -1,0 +1,41 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: $mainPadding;
+  padding-left: $mainPadding;
+}
+
+// Small Screen
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+// Medium Screen
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+// Large Screen
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s ease-in-out; 
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%
+}
