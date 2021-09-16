@@ -79,19 +79,21 @@ header .container .logo {
 }
 
 header .container .icons {
-  justify-self: end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
-header .container .icons .icon {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+header .container .icons a {
+  padding-left: 10px;
+  color: #414141;
+}
+
+header .container .icons a i {
+  font-size: 22px;
+}
+
+header .container .icons a:hover {
+  color: #8FD1B6;
 }
 
 header .container hr {
@@ -285,7 +287,9 @@ nav.sec .container .items {
           align-items: center;
 }
 
-nav.sec .container .items .main .icon {
+nav.sec .container .items .main i {
+  color: #414141;
+  font-size: 20px;
   margin-right: 20px;
 }
 
@@ -382,8 +386,7 @@ nav.sec .container hr {
 }
 
 .products .container .item {
-  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(50%, #f4f8f4d3), to(#f1efe6));
-  background-image: linear-gradient(to top left, #f4f8f4d3 50%, #f1efe6 100%);
+  background-color: #f5f5f591;
 }
 
 .products .container .item > div {
@@ -457,32 +460,39 @@ nav.sec .container hr {
   font-size: 18px;
 }
 
-.products .container .item .cart img:nth-child(2) {
+.products .container .item .cart i {
+  padding-right: 15px;
+}
+
+.products .container .item .cart i:nth-child(2) {
   display: none;
 }
 
 .products .container .item:hover {
-  border: 1px solid #8FD1B6;
+  outline: 1px solid #8FD1B6;
 }
 
 .products .container .item:hover .cart {
   color: #8FD1B6;
+}
+
+.products .container .item:hover .cart i {
   cursor: pointer;
 }
 
-.products .container .item:hover .cart img:nth-child(1) {
+.products .container .item:hover .cart i:nth-child(1) {
   display: none;
 }
 
-.products .container .item:hover .cart img:nth-child(2) {
+.products .container .item:hover .cart i:nth-child(2) {
   display: block;
 }
 
 .features {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(600px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  -ms-grid-columns: (minmax(620px, auto))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(620px, auto));
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -602,7 +612,7 @@ nav.sec .container hr {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1260px) {
   .features .price {
     margin-bottom: 80px;
   }
@@ -636,8 +646,8 @@ nav.sec .container hr {
 .services {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(335px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   margin-bottom: 80px;
   line-height: 1.7;
 }
@@ -665,6 +675,13 @@ nav.sec .container hr {
 .services .serv p:last-of-type {
   font-size: 14px;
   color: #767676;
+}
+
+@media (min-width: 1200px) {
+  .services {
+    -ms-grid-columns: (minmax(250px, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(250px, 1fr));
+  }
 }
 
 .about .container {
@@ -824,29 +841,6 @@ header .container .search input:focus, nav.sec .container .items .search input:f
 header .container .search i, nav.sec .container .items .search i {
   color: #414141;
   font-size: 14px;
-}
-
-header .container .icons .icon, nav.sec .container .items .main .icon {
-  width: 30px;
-  height: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-}
-
-header .container .icons .icon span, nav.sec .container .items .main .icon span {
-  border-radius: 5px;
-  height: 2px;
-  background-color: #414141;
-  width: 30px;
-}
-
-header .container .icons .icon span:last-child, nav.sec .container .items .main .icon span:last-child {
-  width: 20px;
 }
 
 header .container nav.main ul li a, nav.sec .container .items .main ul li a {
