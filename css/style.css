@@ -387,6 +387,7 @@ nav.sec .container hr {
 
 .products .container .item {
   background-color: #f5f5f591;
+  border: 1px solid transparent;
 }
 
 .products .container .item > div {
@@ -469,7 +470,7 @@ nav.sec .container hr {
 }
 
 .products .container .item:hover {
-  outline: 1px solid #8FD1B6;
+  border: 1px solid #8FD1B6;
 }
 
 .products .container .item:hover .cart {
