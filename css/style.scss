@@ -5,6 +5,7 @@ $secMargin: 80px;
 $mainPadding: 15px;
 
 @import "_myframe";
+@import "_anim";
 
 * {
   padding: 0;
@@ -273,7 +274,23 @@ nav.sec {
         .fav {
           padding: 40px;
           li {
-            padding-bottom: 20px;
+            height: 16px;
+            padding-bottom: 36px;
+            &:nth-child(2) {
+              cursor: pointer;
+              .fas {
+                color: red;
+                display: none;
+              }
+              &:hover {
+                .fas {
+                  display: block;
+                }
+                .far {
+                  display: none;
+                }
+              }
+            }
           }
         }
         figure {
@@ -472,7 +489,7 @@ nav.sec {
 }
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin-bottom: $secMargin;
   line-height: 1.7;
   .serv {
@@ -497,7 +514,7 @@ nav.sec {
       }
     }
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     grid-template-columns: repeat(4, minmax(250px, 1fr));
   }
 }
@@ -572,6 +589,10 @@ footer {
         img {
           height: 40px;
           padding-left: 15px;
+          transition: all .3s ease-in-out; 
+          &:hover {
+            transform: scale(1.3);
+          }
         }
       }
     }
