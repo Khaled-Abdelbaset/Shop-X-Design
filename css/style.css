@@ -409,7 +409,25 @@ nav.sec .container hr {
 }
 
 .products .container .item .prod-img .fav li {
-  padding-bottom: 20px;
+  height: 16px;
+  padding-bottom: 36px;
+}
+
+.products .container .item .prod-img .fav li:nth-child(2) {
+  cursor: pointer;
+}
+
+.products .container .item .prod-img .fav li:nth-child(2) .fas {
+  color: red;
+  display: none;
+}
+
+.products .container .item .prod-img .fav li:nth-child(2):hover .fas {
+  display: block;
+}
+
+.products .container .item .prod-img .fav li:nth-child(2):hover .far {
+  display: none;
 }
 
 .products .container .item .prod-img figure {
@@ -647,8 +665,8 @@ nav.sec .container hr {
 .services {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin-bottom: 80px;
   line-height: 1.7;
 }
@@ -678,7 +696,7 @@ nav.sec .container hr {
   color: #767676;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .services {
     -ms-grid-columns: (minmax(250px, 1fr))[4];
         grid-template-columns: repeat(4, minmax(250px, 1fr));
@@ -776,6 +794,13 @@ footer .container .payment .pay {
 footer .container .payment .pay img {
   height: 40px;
   padding-left: 15px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+footer .container .payment .pay img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 @media (max-width: 577px) {
